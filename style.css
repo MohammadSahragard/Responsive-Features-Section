@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.feature-icon {
+    background-color: #111C44;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.first-gradient {background-image: linear-gradient(to bottom left, #8487FD, #461EFD);}
+.second-gradient {background-image: linear-gradient(to bottom left, #65D1FF, #0057FF);}
+.third-gradient {background-image: linear-gradient(to bottom left, #FD84F1, #A1004E);}
+.fourth-gradient {background-image: linear-gradient(to bottom left, #FDF184, #F05600);}
+
+/* --------------- body elements */
+.background {
+    background-image: url('/image/background.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.features-body {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media screen and (max-width: 990px) {
+    .features-body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .features-body {
+        grid-template-columns: 1fr;
+    }
+}
